@@ -4,6 +4,9 @@
   "description": "Desafio PHP/NodeJS Back-end!",
   "main": "index.js",
   "scripts": {
+    "tsc": "tsc",
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "nodemon -e ts,json src/server.ts"
   },
